@@ -4,3 +4,11 @@ Mapster is a very simple world map enhacement addon, which was designed to work 
 
 
 This is a fork based originally on the [1.3.9 WOTLK client 3.3.5 version](https://warperia.com/addon-wotlk/mapster/), updated for current addon compatibility.
+
+
+# Installation
+
+Download the Repo
+Unzip the Download
+Rename Mapster-main folder to Mapster
+Drag the Mapster folder to your Addons folder.
