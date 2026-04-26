@@ -10,5 +10,5 @@ This is a fork based originally on the [1.3.9 WOTLK client 3.3.5 version](https:
 
 1. Download the Repo
 2. Unzip the Download
-3. Rename Mapster-main folder to Mapster
+3. Rename Mapster-master folder to Mapster
 4. Drag the Mapster folder to your Addons folder.
