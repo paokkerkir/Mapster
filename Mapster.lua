@@ -200,6 +200,13 @@ local function restoreBlobs()
 	-- to crash on nil arithmetic. Skip blob restoration entirely when pfQuest
 	-- is present since pfQuest renders its own nodes independently.
 	if not pfMap then
+		-- WorldMapDetailFrame may not have a valid screen position yet on the
+		-- first OnUpdate tick after combat ends (GetCenter returns nil while the
+		-- frame layout is still being recalculated). Retry next frame instead of
+		-- passing nil values into WorldMapBlobFrame_CalculateHitTranslations.
+		local cx, cy = WorldMapDetailFrame:GetCenter()
+		if not cx or not cy then return end
+
 		WorldMapBlobFrame_CalculateHitTranslations()
 		if WorldMapQuestScrollChildFrame.selected and not WorldMapQuestScrollChildFrame.selected.completed then
 			WorldMapBlobFrame:DrawQuestBlob(WorldMapQuestScrollChildFrame.selected.questId, true)
